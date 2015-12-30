@@ -29,7 +29,7 @@ public class PlayerMotor : MonoBehaviour {
             velocity.y = 0;
         }
 
-        if (base.GetComponent<PlayerCollision>().enabled) {
+        if (collision.enabled) {
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
             if (Input.GetKeyDown(KeyCode.Space) && collision.collisionInfo.below) {
